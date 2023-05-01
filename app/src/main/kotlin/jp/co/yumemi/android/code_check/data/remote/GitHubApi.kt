@@ -5,7 +5,7 @@ import retrofit2.http.Headers
 import retrofit2.http.Query
 
 interface GitHubApi {
-    @Headers("application/vnd.github+json")
+    @Headers("Accept: application/vnd.github+json")
     @GET("search/repositories")
     suspend fun searchRepositories(@Query("q") query: String): SearchRepositoriesResultDto
 }
